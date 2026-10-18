@@ -36,4 +36,14 @@ Title="Comptes"
 ContentTemplate="{DataTemplate local:ComptesPage}"
 Route="ComptesPage" />
 
+    <ShellContent
+Title="Details"
+ContentTemplate="{DataTemplate local:DetailsTransactionPage}"
+Route="DetailsTransactionPage" />
+
+    <ShellContent
+Title="Comptes"
+ContentTemplate="{DataTemplate local:ComptesPage}"
+Route="ComptesPage" />
+
 </Shell>

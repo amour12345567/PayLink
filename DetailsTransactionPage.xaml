@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink.DetailsTransactionPage"
+             BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- En-tête avec bouton retour (simulé) -->
+            <Grid ColumnDefinitions="Auto, *" Margin="0,10,0,20">
+                <Label Text="&lt;" FontSize="24" TextColor="#1A1A1A" VerticalOptions="Center" Margin="0,0,15,0"/>
+                <Label Grid.Column="1" Text="Détails de la transaction" 
+                       TextColor="#1A1A1A" 
+                       FontSize="20" 
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center"/>
+            </Grid>
+
+            <!-- Carte principale du montant -->
+            <Border StrokeShape="RoundRectangle 16" BackgroundColor="White" Padding="20" StrokeThickness="0">
+                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label Text="Retrait" TextColor="#6B7280" FontSize="14" HorizontalOptions="Center"/>
+                    <Label Text="- 5 000 FCFA" TextColor="#EF4444" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <!-- Badge de statut (Échec pour l'exemple) -->
+                    <Border StrokeShape="RoundRectangle 12" BackgroundColor="#FEE2E2" Padding="10,5" HorizontalOptions="Center" StrokeThickness="0">
+                        <Label Text="Échec" TextColor="#EF4444" FontAttributes="Bold" FontSize="12"/>
+                    </Border>
+                    <Label Text="La transaction a été refusée par l'opérateur." TextColor="#EF4444" FontSize="12" HorizontalOptions="Center" Margin="0,5,0,0"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Liste des détails -->
+            <Border StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="20" StrokeThickness="0" Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="15">
+
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Text="Opérateur" TextColor="#6B7280" FontSize="14"/>
+                        <Label Grid.Column="1" Text="Orange Money" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="14"/>
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#E5E7EB"/>
+
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Text="Date" TextColor="#6B7280" FontSize="14"/>
+                        <Label Grid.Column="1" Text="12 Octobre 2026 à 14:30" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="14"/>
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#E5E7EB"/>
+
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Text="Frais" TextColor="#6B7280" FontSize="14"/>
+                        <Label Grid.Column="1" Text="500 FCFA" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="14"/>
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#E5E7EB"/>
+
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Text="Référence" TextColor="#6B7280" FontSize="14"/>
+                        <Label Grid.Column="1" Text="TXN-2026-10-12-001" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="12"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Boutons d'action -->
+            <Grid ColumnDefinitions="*, *" ColumnSpacing="15" Margin="0,20,0,0">
+                <Button Text="Modifier" 
+                        BackgroundColor="White"
+                        BorderColor="#0A2540" 
+                        BorderWidth="1"
+                        TextColor="#0A2540" 
+                        CornerRadius="8" 
+                        HeightRequest="50"/>
+                <Button Grid.Column="1" Text="Supprimer" 
+                        BackgroundColor="White" 
+                        BorderColor="#EF4444" 
+                        BorderWidth="1"
+                        TextColor="#EF4444" 
+                        CornerRadius="8" 
+                        HeightRequest="50"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
