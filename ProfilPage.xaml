@@ -58,8 +58,8 @@
                     FontAttributes="Bold"
                     CornerRadius="12"
                     HeightRequest="50"
-                    Margin="0,30,0,0"/>
-            clicked="OnLogoutClicked"/>
+                    Margin="0,30,0,0"
+            Clicked="OnLogoutClicked"/>
 
         </VerticalStackLayout>
     </ScrollView>

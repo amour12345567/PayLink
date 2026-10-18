@@ -34,8 +34,8 @@
                 FontAttributes="Bold"
                 CornerRadius="12"
                 HeightRequest="50"
-                Margin="0,20,0,0"/>
-        clicked="OnSeConnecterClicked"/>
+                Margin="0,20,0,0"
+        Clicked="OnSeConnecterClicked"/>
 
         <!-- Liens -->
         <Label Text="Mot de passe oublié ?" TextColor="#0A2540" FontSize="12" HorizontalOptions="Center"/>
@@ -43,7 +43,7 @@
         <!-- Lien Créer un compte (Cliquable) -->
         <Label Text="Créer un compte" TextColor="#0A2540" FontSize="12" HorizontalOptions="Center">
             <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnCreerCompteTapped" />
+                <TapGestureRecognizer Tapped="OnCreerCompteTapped"/>
             </Label.GestureRecognizers>
         </Label>
 

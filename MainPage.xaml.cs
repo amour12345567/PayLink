@@ -7,13 +7,15 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    // Fonction appelée quand on tape sur le Label "Créer un compte"
+    private async void OnSeConnecterClicked(object sender, EventArgs e)
+    {
+        
+        await Shell.Current.GoToAsync("//DashboardPage");
+    }
+    
     private async void OnCreerCompteTapped(object sender, TappedEventArgs e)
     {
-        // Navigation vers la page d'inscription
+       
         await Shell.Current.GoToAsync("InscriptionPage");
-
-        // Navigation vers la page du dashboard
-        await Shell.Current.GoToAsync("DashboardPage");
     }
 }

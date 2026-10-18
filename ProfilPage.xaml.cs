@@ -7,7 +7,7 @@ public partial class ProfilPage : ContentPage
         InitializeComponent();
     }
 
-    private async void OnSeDeconnecterClicked(object sender, EventArgs e)
+    private async void OnLogoutClicked(object sender, EventArgs e)
     {
         // Retourne à l'écran de connexion principal
         await Shell.Current.GoToAsync("//MainPage");
