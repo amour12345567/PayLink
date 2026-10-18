@@ -7,13 +7,18 @@
     Title="PayLink">
 
     <ShellContent
-    Title="Home"
+    Title="Connexion"
     ContentTemplate="{DataTemplate local:MainPage}"
     Route="MainPage" />
     
     <ShellContent
-        Title="Home"
+        Title="Inscription"
         ContentTemplate="{DataTemplate local:InscriptionPage}"
         Route="InscriptionPage" />
+    
+    <ShellContent
+    Title="Dashboard"
+    ContentTemplate="{DataTemplate local:DashboardPage}"
+    Route="DashboardPage" />
 
 </Shell>

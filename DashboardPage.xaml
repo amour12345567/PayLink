@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink.DashboardPage"
+             BackgroundColor="#F5F7FA">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!-- EN-TÊTE -->
+        <Grid Grid.Row="0" ColumnDefinitions="*, Auto" Padding="20,20,20,10">
+            <Label Text="Bonjour Annette" 
+                   TextColor="#1A1A1A" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   VerticalOptions="Center"/>
+
+            <!-- Avatar -->
+            <Border Grid.Column="1" StrokeShape="RoundRectangle 20" BackgroundColor="#D1D5DB" WidthRequest="40" HeightRequest="40"/>
+        </Grid>
+
+        <!-- CONTENU PRINCIPAL -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!-- CARTE SOLDE CONSOLIDÉ -->
+                <Border StrokeShape="RoundRectangle 16" BackgroundColor="#0A2540" Padding="20" StrokeThickness="0">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Solde Consolidé" TextColor="White" FontSize="14" Opacity="0.8"/>
+                        <Label Text="150 000 FCFA" TextColor="White" FontSize="28" FontAttributes="Bold"/>
+                        <Label Text="Mis à jour à l'instant" TextColor="#D1D5DB" FontSize="12"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SYNTHÈSE MENSUELLE -->
+                <Label Text="Synthèse mensuelle" TextColor="#1A1A1A" FontSize="16" FontAttributes="Bold" Margin="0,10,0,0"/>
+
+                <!-- Graphique (barres) -->
+                <Grid ColumnDefinitions="*,*,*,*,*" HeightRequest="120" ColumnSpacing="10">
+                    <VerticalStackLayout Grid.Column="0" VerticalOptions="End" Spacing="5">
+                        <BoxView Color="#00A86B" HeightRequest="80" CornerRadius="4"/>
+                        <Label Text="Sem 1" FontSize="10" HorizontalOptions="Center" TextColor="#6B7280"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" VerticalOptions="End" Spacing="5">
+                        <BoxView Color="#00A86B" HeightRequest="60" CornerRadius="4"/>
+                        <Label Text="Sem 2" FontSize="10" HorizontalOptions="Center" TextColor="#6B7280"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="2" VerticalOptions="End" Spacing="5">
+                        <BoxView Color="#00A86B" HeightRequest="90" CornerRadius="4"/>
+                        <Label Text="Sem 3" FontSize="10" HorizontalOptions="Center" TextColor="#6B7280"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="3" VerticalOptions="End" Spacing="5">
+                        <BoxView Color="#00A86B" HeightRequest="50" CornerRadius="4"/>
+                        <Label Text="Sem 4" FontSize="10" HorizontalOptions="Center" TextColor="#6B7280"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="4" VerticalOptions="End" Spacing="5">
+                        <BoxView Color="#EF4444" HeightRequest="30" CornerRadius="4"/>
+                        <Label Text="Sem 5" FontSize="10" HorizontalOptions="Center" TextColor="#6B7280"/>
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- BOUTON FLOTTANT (+) -->
+        <Border Grid.Row="0" Grid.RowSpan="3" 
+                StrokeShape="RoundRectangle 30" 
+                BackgroundColor="#00A86B" 
+                WidthRequest="60" HeightRequest="60" 
+                HorizontalOptions="End" VerticalOptions="End" 
+                Margin="0,0,20,20"
+                StrokeThickness="0">
+            <Label Text="+" TextColor="White" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,-5,0,0"/>
+        </Border>
+    </Grid>
+</ContentPage>
