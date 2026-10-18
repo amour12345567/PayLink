@@ -6,44 +6,28 @@
     xmlns:local="clr-namespace:PayLink"
     Title="PayLink">
 
-    <ShellContent
-    Title="Connexion"
-    ContentTemplate="{DataTemplate local:MainPage}"
-    Route="MainPage" />
-    
-    <ShellContent
+        <!-- Écran de départ (sans barre de navigation) -->
+        <ShellContent
+        Title="Connexion"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <!-- Écran d'inscription (sans barre de navigation) -->
+        <ShellContent
         Title="Inscription"
         ContentTemplate="{DataTemplate local:InscriptionPage}"
         Route="InscriptionPage" />
 
-    <ShellContent
-    Title="Dashboard"
-    ContentTemplate="{DataTemplate local:DashboardPage}"
-    Route="DashboardPage" />
+        <!-- LE MENU PRINCIPAL AVEC LA BARRE EN BAS (TabBar) -->
+        <TabBar>
+            <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate local:DashboardPage}" Route="DashboardPage" />
+            <ShellContent Title="Historique" ContentTemplate="{DataTemplate local:HistoriquePage}" Route="HistoriquePage" />
+            <ShellContent Title="Comptes" ContentTemplate="{DataTemplate local:ComptesPage}" Route="ComptesPage" />
+            <ShellContent Title="Profil" ContentTemplate="{DataTemplate local:ProfilPage}" Route="ProfilPage" />
+        </TabBar>
 
-    <ShellContent
-Title="Ajout"
-ContentTemplate="{DataTemplate local:AjouterTransactionPage}"
-Route="AjouterTransactionPage" />
+        <!-- Pages qui n'ont pas besoin d'être dans la barre en bas mais qu'on doit pouvoir atteindre -->
+        <ShellContent Title="Ajout" ContentTemplate="{DataTemplate local:AjoutTransactionPage}" Route="AjoutTransactionPage" />
+        <ShellContent Title="Détails" ContentTemplate="{DataTemplate local:DetailsTransactionPage}" Route="DetailsTransactionPage" />
 
-    <ShellContent
-Title="Historique"
-ContentTemplate="{DataTemplate local:HistoriquePage}"
-Route="HistoriquePage" />
-
-    <ShellContent
-Title="Comptes"
-ContentTemplate="{DataTemplate local:ComptesPage}"
-Route="ComptesPage" />
-
-    <ShellContent
-Title="Details"
-ContentTemplate="{DataTemplate local:DetailsTransactionPage}"
-Route="DetailsTransactionPage" />
-
-    <ShellContent
-Title="Profil"
-ContentTemplate="{DataTemplate local:ProfilPage}"
-Route="ProfilPage" />
-
-</Shell>
+    </Shell>

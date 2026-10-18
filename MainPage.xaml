@@ -35,6 +35,7 @@
                 CornerRadius="12"
                 HeightRequest="50"
                 Margin="0,20,0,0"/>
+        clicked="OnSeConnecterClicked"/>
 
         <!-- Liens -->
         <Label Text="Mot de passe oublié ?" TextColor="#0A2540" FontSize="12" HorizontalOptions="Center"/>

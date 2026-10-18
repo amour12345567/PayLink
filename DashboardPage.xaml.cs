@@ -6,4 +6,10 @@ public partial class DashboardPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void OnAjouterTransactionTapped(object sender, EventArgs e)
+    {
+        // Navigation vers la page d'ajout de transaction
+        await Shell.Current.GoToAsync("AjoutTransactionPage");
+    }
 }

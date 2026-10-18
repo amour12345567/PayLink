@@ -69,6 +69,13 @@
                 HorizontalOptions="End" VerticalOptions="End" 
                 Margin="0,0,20,20"
                 StrokeThickness="0">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAjouterTransactionTapped" />
+                </Border.GestureRecognizers>
+
+                <Label Text="+" TextColor="White" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,-5,0,0"/>
+            </Border>
             <Label Text="+" TextColor="White" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,-5,0,0"/>
         </Border>
     </Grid>

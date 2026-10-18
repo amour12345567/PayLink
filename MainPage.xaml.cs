@@ -12,5 +12,8 @@ public partial class MainPage : ContentPage
     {
         // Navigation vers la page d'inscription
         await Shell.Current.GoToAsync("InscriptionPage");
+
+        // Navigation vers la page du dashboard
+        await Shell.Current.GoToAsync("DashboardPage");
     }
 }
