@@ -26,4 +26,9 @@ Title="Ajout"
 ContentTemplate="{DataTemplate local:AjouterTransactionPage}"
 Route="AjouterTransactionPage" />
 
+    <ShellContent
+Title="Historique"
+ContentTemplate="{DataTemplate local:HistoriquePage}"
+Route="HistoriquePage" />
+
 </Shell>
