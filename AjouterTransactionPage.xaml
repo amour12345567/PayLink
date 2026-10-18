@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink.AjoutTransactionPage"
+             BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Titre -->
+            <Label Text="Nouvelle transaction" 
+                   TextColor="#1A1A1A" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   Margin="0,10,0,20"/>
+
+            <!-- Champ Montant -->
+            <Border Stroke="#D1D5DB" StrokeThickness="1" BackgroundColor="White" Padding="15,0" HeightRequest="50">
+                <Entry Placeholder="Montant (FCFA)" Keyboard="Numeric" TextColor="#1A1A1A" PlaceholderColor="#6B7280"/>
+            </Border>
+
+            <!-- Boutons Dépôt / Retrait -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="15" Margin="0,5">
+                <!-- Dépôt (Actif) -->
+                <Button Grid.Column="0" Text="Dépôt" 
+                        BackgroundColor="#00A86B" 
+                        TextColor="White" 
+                        CornerRadius="8" 
+                        HeightRequest="45"/>
+                <!-- Retrait (Inactif) -->
+                <Button Grid.Column="1" Text="Retrait" 
+                        BackgroundColor="White" 
+                        BorderColor="#D1D5DB" 
+                        BorderWidth="1"
+                        TextColor="#6B7280" 
+                        CornerRadius="8" 
+                        HeightRequest="45"/>
+            </Grid>
+
+            <!-- Champ Opérateur (Menu déroulant) -->
+            <Border Stroke="#D1D5DB" StrokeThickness="1" BackgroundColor="White" Padding="15,0" HeightRequest="50">
+                <Picker Title="Opérateur (MTN, Orange...)" TextColor="#1A1A1A" TitleColor="#6B7280">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>MTN MoMo</x:String>
+                            <x:String>Orange Money</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Border>
+
+            <!-- Champ Date -->
+            <Border Stroke="#D1D5DB" StrokeThickness="1" BackgroundColor="White" Padding="15,0" HeightRequest="50">
+                <DatePicker TextColor="#1A1A1A" Format="dd MMMM yyyy" />
+            </Border>
+
+            <!-- Carte Frais estimés -->
+            <Border StrokeShape="RoundRectangle 8" BackgroundColor="#E6F0FF" Padding="15" Margin="0,10,0,0" StrokeThickness="0">
+                <Grid ColumnDefinitions="*, Auto">
+                    <Label Text="Frais estimés" TextColor="#0A2540" VerticalOptions="Center" FontSize="14"/>
+                    <Label Grid.Column="1" Text="500 FCFA" TextColor="#0A2540" FontAttributes="Bold" VerticalOptions="Center" FontSize="16"/>
+                </Grid>
+            </Border>
+
+            <!-- Bouton Enregistrer -->
+            <Button Text="Enregistrer la transaction" 
+                    BackgroundColor="#00A86B" 
+                    TextColor="White" 
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
