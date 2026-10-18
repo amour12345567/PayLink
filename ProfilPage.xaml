@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink.ProfilPage"
+             BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Titre -->
+            <Label Text="Mon Profil" 
+                   TextColor="#1A1A1A" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   Margin="0,10,0,10"/>
+
+            <!-- En-tête Profil (Avatar + Infos) -->
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center" Margin="0,10,0,20">
+                <Border StrokeShape="RoundRectangle 50" BackgroundColor="#0A2540" WidthRequest="100" HeightRequest="100"/>
+                <Label Text="ANNETTE EBELA" TextColor="#1A1A1A" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="annettedorise@gmail.com" TextColor="#6B7280" FontSize="14" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Section Préférences -->
+            <Label Text="Préférences" TextColor="#1A1A1A" FontSize="16" FontAttributes="Bold" Margin="0,10,0,0"/>
+
+            <!-- Option 1 : Mode Sombre -->
+            <Border StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="15" StrokeThickness="0">
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="Mode Sombre" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="14"/>
+                        <Label Text="Réduit la consommation de batterie" TextColor="#6B7280" FontSize="12"/>
+                    </VerticalStackLayout>
+                    <Switch Grid.Column="1" OnColor="#00A86B" VerticalOptions="Center"/>
+                </Grid>
+            </Border>
+
+            <!-- Option 2 : Notifications -->
+            <Border StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="15" StrokeThickness="0">
+                <Grid ColumnDefinitions="*, Auto">
+                    <Label Text="Notifications" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                    <Switch Grid.Column="1" OnColor="#00A86B" VerticalOptions="Center" IsToggled="True"/>
+                </Grid>
+            </Border>
+
+            <!-- Option 3 : Devise -->
+            <Border StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="15" StrokeThickness="0">
+                <Grid ColumnDefinitions="*, Auto">
+                    <Label Text="Devise par défaut (FCFA)" TextColor="#1A1A1A" FontAttributes="Bold" FontSize="14" VerticalOptions="Center"/>
+                    <Switch Grid.Column="1" OnColor="#00A86B" VerticalOptions="Center" IsToggled="True"/>
+                </Grid>
+            </Border>
+
+            <!-- Bouton Déconnexion -->
+            <Button Text="Se déconnecter" 
+                    BackgroundColor="#EF4444" 
+                    TextColor="White" 
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    Margin="0,30,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
