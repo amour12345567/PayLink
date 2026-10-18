@@ -31,4 +31,9 @@ Title="Historique"
 ContentTemplate="{DataTemplate local:HistoriquePage}"
 Route="HistoriquePage" />
 
+    <ShellContent
+Title="Comptes"
+ContentTemplate="{DataTemplate local:ComptesPage}"
+Route="ComptesPage" />
+
 </Shell>
